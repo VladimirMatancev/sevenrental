@@ -21,10 +21,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!--		Thymeleaf templates web page-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<!--		Thymeleaf templates web page-->
+		<!--		Mustache templates web page-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mustache</artifactId>
+		</dependency>
+		<!--		Mustache templates web page-->
 
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
