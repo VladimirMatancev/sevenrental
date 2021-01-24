@@ -1,5 +1,6 @@
-package com.sevenrental.core.models.users;
+package com.sevenrental.core.enams;
 
+import com.sevenrental.core.enams.Permission;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

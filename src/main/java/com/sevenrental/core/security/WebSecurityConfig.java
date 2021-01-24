@@ -1,6 +1,6 @@
 package com.sevenrental.core.security;
 
-import com.sevenrental.core.models.users.Role;
+import com.sevenrental.core.enams.Role;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -24,13 +24,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-//                .antMatchers(HttpMethod.GET,"/users/**").hasAuthority(Permission.USERS_READ.getPermission())
-//                .antMatchers(HttpMethod.POST,"/users/**").hasAuthority(Permission.USERS_WRITE.getPermission())
-//                .antMatchers(HttpMethod.DELETE,"/users/**").hasAuthority(Permission.USERS_WRITE.getPermission())
                 .anyRequest()
                 .authenticated()
                 .and()
-//                .httpBasic()
                 .formLogin()
                 .loginPage("/auth/login").permitAll()
                 .defaultSuccessUrl("/auth/success")

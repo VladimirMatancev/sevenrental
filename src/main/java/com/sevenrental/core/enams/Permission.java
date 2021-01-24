@@ -1,4 +1,4 @@
-package com.sevenrental.core.models.users;
+package com.sevenrental.core.enams;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
