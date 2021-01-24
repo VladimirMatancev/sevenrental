@@ -1,11 +1,7 @@
 package com.sevenrental.core.controllers;
 
-import com.sevenrental.core.models.ModelUser;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.sevenrental.core.models.users.ModelUser;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,5 +24,15 @@ public class ControllerUser {
     public ModelUser getById(@PathVariable Long id){
         return ListUsers.stream().filter(user -> user.getId().equals(id))
                 .findFirst().orElse(null);
+    }
+    @PostMapping
+    public ModelUser create(@RequestBody ModelUser modelUser){
+        this.ListUsers.add(modelUser);
+        return modelUser;
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Long id){
+        this.ListUsers.removeIf(modelUser -> modelUser.getId().equals(id));
     }
 }
